@@ -12,6 +12,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -40,14 +41,16 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         modifier.padding(16.dp)) {
         Text(
             text = "Welcome to the weather app, $name!",
-            modifier = modifier
+            modifier = Modifier.padding(16.dp)
         )
         TextField(
             value = "",
-            onValueChange = { /*To Do*/ }
+            onValueChange = { /*To Do*/ },
+            modifier = modifier.padding(16.dp)
         )
         Button(
-            onClick = { /* do */ }
+            onClick = { /* do */ },
+            modifier = modifier.padding(16.dp).align(Alignment.End)
         )
         {
             Text(
